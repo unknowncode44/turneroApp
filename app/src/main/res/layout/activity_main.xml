@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient01"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/IconSchedule"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:contentDescription="@string/ingresa"
+        android:src="@drawable/schedule"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/IconSchedule"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="@string/bienvenido_a_turnero"
+        android:textColor="@color/Black"
+        android:textSize="28sp"
+        android:textStyle="normal"
+        android:fontFamily="@font/rubik_regular"/>
+
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/registerBtn"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_button01"
+        android:fontFamily="@font/rubik_regular"
+        android:text="@string/ingresa2"
+        android:textColor="@color/White"
+        app:backgroundTint="@color/Secondary"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_button02"
+        android:fontFamily="@font/rubik_regular"
+        android:text="@string/registrate"
+        android:textColor="@color/Secondary"
+        app:backgroundTint="@color/Secondary"
+        tools:ignore="TextContrastCheck" />
+
+
+</RelativeLayout>

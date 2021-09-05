@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">turnero</string>
+    <string name="schedule_logo">schedule_logo</string>
+    <string name="turnero_app">Turnero-App</string>
+    <string name="ingresa">TODO</string>
+    <string name="bienvenido_a_turnero">Bienvenid@ Turnero</string>
+    <string name="ingresa2">INGRESA</string>
+    <string name="registrate">REGISTRATE</string>
+    <string name="ingresa_con_tu_email_y_contrasena">Ingresa con tu email y contrasena</string>
+    <string name="todo">TODO</string>
+    <string name="email">Email</string>
+    <string name="contrasena">Contrasena</string>
+    <string name="olvide_mi_contrasena">Olvide mi contrasena</string>
+    <string name="desarrollado_por_unknowncode">Desarrollado por UnknownCode</string>
+</resources>

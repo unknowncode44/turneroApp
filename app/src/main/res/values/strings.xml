@@ -3,7 +3,8 @@
     <string name="schedule_logo">schedule_logo</string>
     <string name="turnero_app">Turnero-App</string>
     <string name="ingresa">TODO</string>
-    <string name="bienvenido_a_turnero">Bienvenid@ Turnero</string>
+    <string name="bienvenido_a_turnero">Bienvenido a Turnero</string>
+    <string name="bienvenido_a_turnero_texto">Turnero te ayuda a solicitar turnos a diferentes clinicas, y los organiza para que lo tengas al alcance de la mano. Tambien te nofifica acerca de los proximos turnos, te informa cambios o retrasos, gestiona tus credenciales de obra social, etc. Gestionar tus turnos nunca fue tan facil con Turnero!</string>
     <string name="ingresa2">INGRESA</string>
     <string name="registrate">REGISTRATE</string>
     <string name="ingresa_con_tu_email_y_contrasena">Ingresa con tu email y contrasena</string>
@@ -12,4 +13,11 @@
     <string name="contrasena">Contrasena</string>
     <string name="olvide_mi_contrasena">Olvide mi contrasena</string>
     <string name="desarrollado_por_unknowncode">Desarrollado por UnknownCode</string>
+    <string name="no_tenes_cuenta_toca_aca">No tenes cuenta? <b>Toca aca</b></string>
+    <string name="ya_tenes_cuenta_toca_aca">Ya tenes cuenta? <b>Toca aca</b></string>
+    <string name="crea_tu_cuenta">Crea tu cuenta!</string>
+    <string name="nombre">Nombre</string>
+    <string name="repite_contrasena">Repite Contrasena</string>
+    <string name="registrate_01">Registrate</string>
+    <string name="pantalla_inicial">Pantalla Inicial</string>
 </resources>

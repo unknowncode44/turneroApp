@@ -17,17 +17,32 @@
         android:contentDescription="@string/ingresa"
         android:src="@drawable/schedule"
         tools:ignore="ContentDescription,ImageContrastCheck" />
+
     <TextView
+        android:id="@+id/welcomeTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/IconSchedule"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
+        android:fontFamily="@font/rubik_regular"
         android:text="@string/bienvenido_a_turnero"
         android:textColor="@color/Black"
         android:textSize="28sp"
-        android:textStyle="normal"
-        android:fontFamily="@font/rubik_regular"/>
+        android:textStyle="normal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/rubik_light"
+        android:text="@string/bienvenido_a_turnero_texto"
+        android:textAlignment="center"
+        android:textColor="@color/Black"
+        android:textSize="16sp"
+        android:textStyle="normal" />
 
 
     <Button

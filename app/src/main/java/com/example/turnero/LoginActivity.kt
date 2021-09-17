@@ -11,6 +11,8 @@ class LoginActivity : AppCompatActivity() {
     // de esta manera mejoramos la fluidez en la navegacion
     // documentacion: https://developer.android.com/topic/libraries/view-binding?hl=es-419
 
+
+
     // creamos la variable binding diciendo que es una instancia de la clase ActivityMainBinding
     private lateinit var binding: ActivityLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,4 +32,6 @@ class LoginActivity : AppCompatActivity() {
 
 
     }
+
+
 }

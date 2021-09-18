@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         
 
-        // llamamos instanciamos la variable con el metodo inflate de la clase ActivityMainBinding
+        // llamamos instanciamos la variable con el metodo inflate de la clase ActivityMainBinding ......
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

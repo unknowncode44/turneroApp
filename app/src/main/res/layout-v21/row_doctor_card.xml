@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--utilizamos el layout CardView-->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginTop="25dp"
+
+    android:layout_height="200dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="5dp"
+    android:backgroundTint="@color/Secondary">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:padding="2dp">
+
+        <ImageView
+            android:id="@+id/doctor_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/doctor1">
+
+        </ImageView>
+        <!--titulo-->
+        <TextView
+            android:id="@+id/doctor_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:text="Doctor Nick Rivera"
+            android:fontFamily="@font/rubik_regular"
+            android:textFontWeight="600"
+            android:textColor="@color/White"
+            android:textSize="24sp">
+
+        </TextView>
+        <!--    informacion del doctor    -->
+        <TextView
+            android:id="@+id/doctor_information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="10dp"
+            android:text="Especialidad: Pediatra
+                          Atiende: L-V 9:00 a 17:00
+                          Prox. Turno Disp.: 18/09/21"
+            android:layout_below="@+id/doctor_title"
+            android:fontFamily="@font/rubik_regular"
+            android:textFontWeight="200"
+            android:textColor="@color/White"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText,UnusedAttribute">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/request_appointment_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_below="@+id/doctor_information"
+            android:layout_marginStart="145dp"
+            android:layout_marginTop="25dp"
+            android:elevation="10dp"
+            android:enabled="true"
+            android:fontFamily="@font/rubik_regular"
+            android:text="@string/solicitar_turno"
+            android:textSize="14sp"
+            app:backgroundTint="@color/Primary">
+
+        </Button>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

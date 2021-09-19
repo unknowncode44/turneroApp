@@ -53,30 +53,17 @@
         android:layout_marginTop="120dp"
         android:background="@drawable/shape_toolbar03"
         android:outlineAmbientShadowColor="@color/Gray"
-        android:padding="10dp">
+        android:padding="1dp">
 
-        <HorizontalScrollView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_dr_cards"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/transparent">
 
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/shape_card04"></HorizontalScrollView>
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/shape_card04"></HorizontalScrollView>
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/shape_card04"></HorizontalScrollView>
-        </HorizontalScrollView>
+            >
 
 
+        </androidx.recyclerview.widget.RecyclerView>
 
 
     </RelativeLayout>

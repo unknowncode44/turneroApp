@@ -70,7 +70,7 @@
                 app:hintEnabled="false">
 
                 <EditText
-                    android:id="@+id/emailEt"
+                    android:id="@+id/loginEmailEt"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:autofillHints="false"
@@ -98,7 +98,7 @@
                 app:passwordToggleEnabled="true">
 
                 <EditText
-                    android:id="@+id/passwordEt"
+                    android:id="@+id/loginPasswordEt"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:autofillHints="false"

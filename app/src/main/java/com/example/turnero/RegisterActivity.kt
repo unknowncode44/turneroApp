@@ -54,6 +54,7 @@ class RegisterActivity : AppCompatActivity() {
             userPassword = findViewById<EditText>(R.id.loginPasswordEt) as EditText // no debemos olvidar pasarlo a string  cuando lo utilicemos
             repeatUserPassword = findViewById<EditText>(R.id.repeatPasswordEt) as EditText // no debemos olvidar pasarlo a string  cuando lo utilicemos
 
+
             // creamos una condicion para revisar si la contrasena es mayor o igual a 6 caracteres
             if (userPassword.text.length >= 6){
                 // anidamos otra condicion solo para corroborar que las contrasenas coinciden
@@ -85,9 +86,9 @@ class RegisterActivity : AppCompatActivity() {
                 // una vez generado el usuario capturamos su token (llamado UID - que es un identificador unico del usuario)
                 val uid = auth.currentUser!!.uid
                 // creamos un objeto con el nombre y el email capturados a fin de guardarlos en la base de datos
-                val user = User(name, email)
+                val user = User(name, email, "x-user")
                 // procedemos a guardar los datos en nuestra base de datos, en el nodo "users", creando un nuevo nodo con el UID, y almacenamos dentro el objeto user
-                database.child("users").child(uid).setValue(user)
+                database.child("users/users").child(uid).setValue(user)
                 // indicamos a traves de un toast que el usuario fue creado exitosamente
                 Toast.makeText(baseContext, "Se creo el usuario exitosamente.", Toast.LENGTH_SHORT).show()
                 // navegamos a la pagina de inicio
@@ -106,6 +107,6 @@ class RegisterActivity : AppCompatActivity() {
 }
 // esta clase la usamos para generar un objeto con los datos principales del usuario: Nombre y Email.
 @IgnoreExtraProperties
-data class User(val username: String? = null, val email: String? = null) {
+data class User(val username: String? = null, val email: String? = null, val type: String? = null) {
 
 }

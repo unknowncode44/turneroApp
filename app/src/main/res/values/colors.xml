@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="Fab_google"> #f3f3f3</color>
     <color name="Primary"> #7cdbe3</color>
     <color name="SecondaryTwo">#d989d4</color>
     <color name="Secondary">#8572f0</color>

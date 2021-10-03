@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:background="@drawable/edit_text_shape"
+        android:fontFamily="@font/rubik_regular"
+        android:id="@+id/login_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintVertical_bias=".10"
+        app:layout_constraintHorizontal_bias=".5"
+        android:hint="@string/email"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Autofill,RtlHardcoded,RtlSymmetry,TextFields" />
+
+    <EditText
+        android:background="@drawable/edit_text_shape"
+        android:fontFamily="@font/rubik_regular"
+        android:id="@+id/login_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombre"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_email" 
+        app:layout_constraintWidth_percent="0.8"
+        tools:ignore="Autofill,RtlHardcoded,RtlSymmetry,TextFields"  />
+
+    <EditText
+        android:background="@drawable/edit_text_shape"
+        android:fontFamily="@font/rubik_regular"
+        android:id="@+id/login_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintHorizontal_bias=".5"
+        android:hint="@string/contrasena"
+        android:paddingLeft="20dp"
+        android:inputType="textVisiblePassword"
+        android:layout_marginTop="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_name"
+        tools:ignore="Autofill,RtlHardcoded,RtlSymmetry,TextFields"  />
+
+    <EditText
+        android:background="@drawable/edit_text_shape"
+        android:fontFamily="@font/rubik_regular"
+        android:id="@+id/login_confirm_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/repite_contrasena"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:inputType="textVisiblePassword"
+        android:paddingBottom="10dp"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_password"
+        app:layout_constraintWidth_percent="0.8"
+        tools:ignore="Autofill,RtlHardcoded,RtlSymmetry,TextFields" />
+
+    <Button
+        app:backgroundTint="@color/Secondary"
+        android:background="@drawable/shape_button01"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintWidth_percent=".8"
+        android:text="REGISTRATE"
+        style="bold"
+        android:fontFamily="@font/rubik_regular"
+        android:textSize="16sp"
+        app:layout_constraintVertical_bias=".5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_confirm_password"
+
+        tools:ignore="HardcodedText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

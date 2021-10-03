@@ -47,8 +47,7 @@ class RegisterActivity : AppCompatActivity() {
 
         // definimos las acciones que realizaremos al tocar el boton de registro
         binding.registerBtn.setOnClickListener{
-            // asignamos los valores de los campos a las variables creadas
-
+            // asignamos los valores de los campos a las variables creadase
             userName = findViewById<EditText>(R.id.nameEt) as EditText // no debemos olvidar pasarlo a string cuando lo utilicemos
             userEmail = findViewById<EditText>(R.id.loginEmailEt) as EditText // no debemos olvidar pasarlo a string  cuando lo utilicemos
             userPassword = findViewById<EditText>(R.id.loginPasswordEt) as EditText // no debemos olvidar pasarlo a string  cuando lo utilicemos

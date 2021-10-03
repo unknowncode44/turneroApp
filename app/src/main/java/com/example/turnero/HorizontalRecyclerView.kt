@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView // importamos la libreria que n
 class HorizontalRecyclerView: RecyclerView.Adapter<HorizontalRecyclerView.MyViewHolder>() {
 
 
-    //creamos metodo para mostrar la tarjeta
+    //on create view holder nos traer el diseno de la vista
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.row_doctor_card, parent, false)
         return MyViewHolder(view)
@@ -27,7 +27,7 @@ class HorizontalRecyclerView: RecyclerView.Adapter<HorizontalRecyclerView.MyView
     }
 
 
-    // subclase MyViewHolder se encargara de manejar nuestras vistas, osea las tarjetas que mostraremos.
+    // subclase MyViewHolder se encargara de manejara los datos que mostraremos en la tarjeta.
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
     }

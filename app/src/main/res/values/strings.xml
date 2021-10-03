@@ -9,16 +9,17 @@
     <string name="registrate">REGISTRATE</string>
     <string name="ingresa_con_tu_email_y_contrasena">Ingresa con tu email y contrasena</string>
     <string name="todo">TODO</string>
-    <string name="email">Email</string>
-    <string name="contrasena">Contrasena</string>
     <string name="olvide_mi_contrasena">Olvide mi contrasena</string>
     <string name="desarrollado_por_unknowncode">Desarrollado por UnknownCode</string>
     <string name="no_tenes_cuenta_toca_aca">No tenes cuenta? <b>Toca aca</b></string>
     <string name="ya_tenes_cuenta_toca_aca">Ya tenes cuenta? <b>Toca aca</b></string>
     <string name="crea_tu_cuenta">Crea tu cuenta!</string>
-    <string name="nombre">Nombre</string>
-    <string name="repite_contrasena">Repite Contrasena</string>
     <string name="registrate_01">Registrate</string>
     <string name="pantalla_inicial">Pantalla Inicial</string>
     <string name="solicitar_turno">Solicitar Turno</string>
+    <string name="repite_contrasena">Repite Contrasena</string>
+    <string name="contrasena">Contrasena</string>
+    <string name="nombre">Nombre</string>
+    <string name="email">Email</string>
+    <string name="olvidaste_tu_constrasena">Olvidaste tu constrasena?</string>
 </resources>

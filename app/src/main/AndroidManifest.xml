@@ -16,6 +16,9 @@
             android:name=".SignInActivity"
             android:exported="true" />
         <activity
+            android:name=".SignInActivity2"
+            android:exported="true" />
+        <activity
             android:name=".DashboardAdminActivity"
             android:exported="true" />
         <activity

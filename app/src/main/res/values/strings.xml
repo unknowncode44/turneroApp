@@ -7,9 +7,9 @@
     <string name="bienvenido_a_turnero_texto">Turnero te ayuda a solicitar turnos a diferentes clinicas, y los organiza para que lo tengas al alcance de la mano. Tambien te nofifica acerca de los proximos turnos, te informa cambios o retrasos, gestiona tus credenciales de obra social, etc. Gestionar tus turnos nunca fue tan facil con Turnero!</string>
     <string name="ingresa2">INGRESA</string>
     <string name="registrate">REGISTRATE</string>
-    <string name="ingresa_con_tu_email_y_contrasena">Ingresa con tu email y contrasena</string>
+    <string name="ingresa_con_tu_email_y_contrasena">Ingresa con tu email y contraseña</string>
     <string name="todo">TODO</string>
-    <string name="olvide_mi_contrasena">Olvide mi contrasena</string>
+    <string name="olvide_mi_contrasena">Olvide mi contraseña</string>
     <string name="desarrollado_por_unknowncode">Desarrollado por UnknownCode</string>
     <string name="no_tenes_cuenta_toca_aca">No tenes cuenta? <b>Toca aca</b></string>
     <string name="ya_tenes_cuenta_toca_aca">Ya tenes cuenta? <b>Toca aca</b></string>
@@ -17,9 +17,12 @@
     <string name="registrate_01">Registrate</string>
     <string name="pantalla_inicial">Pantalla Inicial</string>
     <string name="solicitar_turno">Solicitar Turno</string>
-    <string name="repite_contrasena">Repite Contrasena</string>
-    <string name="contrasena">Contrasena</string>
+    <string name="repite_contrasena">Repite Contraseña</string>
+    <string name="contrasena">Contraseña</string>
     <string name="nombre">Nombre</string>
     <string name="email">Email</string>
-    <string name="olvidaste_tu_constrasena">Olvidaste tu constrasena?</string>
+    <string name="olvidaste_tu_contrasena">Olvidaste tu contraseña?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="comenzar">COMENZAR</string>
 </resources>

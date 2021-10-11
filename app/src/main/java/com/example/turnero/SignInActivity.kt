@@ -2,9 +2,7 @@ package com.example.turnero
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageButton
-import android.widget.TableLayout
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 
@@ -28,44 +26,30 @@ class SignInActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_in)
 
         // Asignamos las variables
-        tabLayout = findViewById(R.id.tab_layout)
-        viewPager= findViewById(R.id.view_pager)
         fb = findViewById(R.id.imageButton_facebook)
         googleBtn = findViewById(R.id.imageButton_google)
         instBtn = findViewById(R.id.imageButton_instagram)
 
 
 
-        // le damos gravity a las tabs usando el atributo GRAVITY_FILL, esto lo hacemos para que la vista de las tabs ocupen casi toda la pantalla.
-        tabLayout.tabGravity = TabLayout.GRAVITY_FILL
-
-        // creamos las tabs que usaremos, una para el Login y otra para el Register
-        tabLayout.addTab(tabLayout.newTab().setText("Ingresa"))
-        tabLayout.addTab(tabLayout.newTab().setText("Registrate"))
-
-        // instanciamos el adaptador que creamos
-        val adapter: SignInAdapter = SignInAdapter(supportFragmentManager, this, tabLayout.tabCount);
-        viewPager.adapter = adapter;
-
-        // agregamos la escucha para cuando haya cambios de tab
-        viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
 
 
-        fb.translationY = -100F;
-        googleBtn.translationY = -100F;
-        instBtn.translationY = -100F;
-        tabLayout.translationY = 200F;
 
-        fb.alpha = 0F;
-        googleBtn.alpha = 0F;
-        instBtn.alpha = 0F;
-        tabLayout.alpha = 0F;
+        fb.translationY = -100F
+        googleBtn.translationY = -100F
+        instBtn.translationY = -100F
 
 
-        fb.animate().translationY(tY).alpha(alph).setDuration(1000).setStartDelay(400).start();
-        googleBtn.animate().translationY(tY).alpha(alph).setDuration(1000).setStartDelay(600).start();
-        instBtn.animate().translationY(tY).alpha(alph).setDuration(1000).setStartDelay(800).start();
-        tabLayout.animate().translationY(tY).alpha(alph).setDuration(1000).setStartDelay(100).start();
+        fb.alpha = 0F
+        googleBtn.alpha = 0F
+        instBtn.alpha = 0F
+
+
+
+        fb.animate().translationY(tY).alpha(alph).setDuration(1000).setStartDelay(400).start()
+        googleBtn.animate().translationY(tY).alpha(alph).setDuration(1000).setStartDelay(600).start()
+        instBtn.animate().translationY(tY).alpha(alph).setDuration(1000).setStartDelay(800).start()
+
 
 
 

@@ -22,7 +22,7 @@
         <entry key="app/src/main/res/drawable/shape_edit_text01.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/shape_toolbar01.xml" value="0.5574074074074075" />
         <entry key="app/src/main/res/drawable/shape_toolbar02.xml" value="0.33" />
-        <entry key="app/src/main/res/drawable/shape_toolbar03.xml" value="0.33" />
+        <entry key="app/src/main/res/drawable/shape_toolbar03.xml" value="0.22" />
         <entry key="app/src/main/res/font-v26/rubik_font_family.xml" value="0.225" />
         <entry key="app/src/main/res/font/rubik_font_family.xml" value="0.5462962962962963" />
         <entry key="app/src/main/res/layout-v21/activity_sign_in.xml" value="0.33" />
@@ -32,14 +32,17 @@
         <entry key="app/src/main/res/layout/activity_dashboard_user.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_register2.xml" value="0.47136752136752136" />
-        <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.5" />
         <entry key="app/src/main/res/layout/card_items.xml" value="0.5992478061011283" />
+        <entry key="app/src/main/res/layout/fragment_tab_login.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_tab_register.xml" value="0.25" />
         <entry key="app/src/main/res/layout/login_tab_fragment.xml" value="0.22" />
         <entry key="app/src/main/res/layout/row_doctor_card.xml" value="0.32864583333333336" />
         <entry key="app/src/main/res/layout/row_doctor_cards.xml" value="0.32864583333333336" />
+        <entry key="app/src/main/res/layout/sign_in_fragments/login_tab_fragment.xml" value="0.14722222222222223" />
         <entry key="app/src/main/res/layout/signup_tab_fragment.xml" value="0.33" />
         <entry key="app/src/main/res/layout/splash_screen.xml" value="0.5" />
         <entry key="app/src/main/res/layout/vista_ejemplo.xml" value="0.5992478061011283" />

@@ -32,6 +32,7 @@
         android:textStyle="normal" />
 
     <TextView
+        android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/welcomeTitle"
@@ -49,27 +50,18 @@
         android:id="@+id/loginBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/registerBtn"
+        android:layout_marginTop="80dp"
+        android:layout_below="@+id/welcomeText"
         android:layout_marginBottom="20dp"
         android:background="@drawable/shape_button01"
         android:fontFamily="@font/rubik_regular"
-        android:text="@string/ingresa2"
+        android:text="@string/comenzar"
+        style="bold"
         android:textColor="@color/White"
         app:backgroundTint="@color/Secondary"
         tools:ignore="TextContrastCheck" />
 
-    <Button
-        android:id="@+id/registerBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/shape_button02"
-        android:fontFamily="@font/rubik_regular"
-        android:text="@string/registrate"
-        android:textColor="@color/Secondary"
-        app:backgroundTint="@color/Secondary"
-        tools:ignore="TextContrastCheck" />
+
 
 
 </RelativeLayout>

@@ -25,12 +25,8 @@ class MainActivity : AppCompatActivity() {
 
         //manejar cuando tocan el boton de registro
         binding.loginBtn.setOnClickListener{
-            startActivity(Intent(this, SignInActivity::class.java))
+            startActivity(Intent(this, SignInActivity2::class.java))
         }
 
-        //manejar cuando tocan el boton de registro
-        binding.registerBtn.setOnClickListener{
-            startActivity(Intent(this, RegisterActivity::class.java))
-        }
     }
 }

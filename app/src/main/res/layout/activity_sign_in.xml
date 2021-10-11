@@ -6,134 +6,148 @@
     android:layout_height="match_parent"
     tools:context=".SignInActivity">
 
+    <!--###HEADER##-->
+    <!--USAREMOS UN IMAGE VIEW PARA LA PARTE SUPERIOR DE LA PANTALLA-->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="190dp"
+        android:layout_height="230dp"
         android:scaleType="centerCrop"
         android:src="@drawable/shape_toolbar02"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0"
         tools:ignore="ContentDescription" />
 
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginBottom="4dp"
-        android:background="@drawable/shape_toolbar03"
-        app:flow_verticalBias="1"
-        app:layout_constraintBaseline_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintHeight="562dp">
-
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/view_pager"
-            android:layout_width="415dp"
-            android:layout_height="384dp"
-            app:layout_constraintBaseline_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tab_layout"
-            app:layout_constraintVertical_bias="0" />
-
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tab_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintEnd_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.05" />
-
-        <ImageButton
-            android:id="@+id/imageButton_google"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:adjustViewBounds="true"
-            android:background="@drawable/floating_sign_in_button"
-            android:elevation="10dp"
-            android:padding="16dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/google_icon1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view_pager"
-            tools:ignore="ContentDescription,UnusedAttribute" />
-
-        <ImageButton
-            android:id="@+id/imageButton_facebook"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_marginRight="10dp"
-            android:adjustViewBounds="true"
-            android:background="@drawable/floating_sign_in_button"
-            android:elevation="10dp"
-            android:padding="16dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/facebook_icon"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/imageButton_google"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/view_pager"
-
-            tools:targetApi="lollipop"
-            tools:ignore="ContentDescription,RtlHardcoded" />
-
-        <ImageButton
-            android:id="@+id/imageButton_instagram"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_marginLeft="10dp"
-            android:adjustViewBounds="true"
-            android:background="@drawable/floating_sign_in_button"
-            android:elevation="10dp"
-            android:padding="16dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/instagram_icon"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0"
-            app:layout_constraintStart_toEndOf="@+id/imageButton_google"
-            app:layout_constraintTop_toBottomOf="@+id/view_pager"
-            tools:ignore="ContentDescription,RtlHardcoded,UnusedAttribute" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+    <!--COLOCAREMOS UNA IMAGEN PARA EL LOGO DE LA APP-->
     <ImageView
         android:id="@+id/logo_sign_in"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        app:layout_constraintVertical_bias="0.3"
+        android:layout_marginTop="45dp"
         android:src="@drawable/schedule"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintBottom_toTopOf="@+id/textView_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
         tools:ignore="ContentDescription" />
 
+    <!--COLOCAREMOS UN TITULO DE BIENVENIDA-->
     <TextView
+        android:id="@+id/textView_title"
+        style="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
         android:fontFamily="@font/rubik_regular"
         android:text="@string/bienvenido_a_turnero"
         android:textColor="@color/White"
         android:textSize="20sp"
-        style="bold"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintBottom_toTopOf="@id/viewSignInBody"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logo_sign_in" />
 
+    <!--###FORMULARIOS DE REGISTRO/INGRESO###-->
+
+    <!--PARA FACILITAR LA UBICACION DE LOS COMPONENTES DEL TABLAYOUT Y VIEW USAMOS RELATIVE LAYOUT-->
+    <RelativeLayout
+        android:id="@+id/viewSignInBody"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@drawable/shape_toolbar03"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton_facebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_title">
+
+        <!--CREAMOS UN TAB LAYOUT PARA UBICAR NUESTRAS TABS DE INGRESO Y REGISTRO-->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/signInTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_toolbar03" />
+
+        <!--CREAMOS UN VIEW PAGER PARA MOSTRAR NUESTROS FRAGMENTS QUE FUNCIONARAN CON NUESTRAS TABS-->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/signIn_ViewPager2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/signInTabLayout"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp" />
+    </RelativeLayout>
+
+    <!--###BOTONES DE REDES SOCIALES-->
+    <!--CREAMOS 3 BOTONES DE INGRESO CON REDES SOCIALES-->
+
+    <!--BOTON GOOGLE - CENTRAL-->
+    <ImageButton
+        android:id="@+id/imageButton_google"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="15dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/floating_sign_in_button"
+        android:elevation="10dp"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/google_icon1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewSignInBody"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription,UnusedAttribute" />
+
+    <!--BOTON FACEBOOK - IZQUIERDA-->
+    <ImageButton
+        android:id="@+id/imageButton_facebook"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/floating_sign_in_button"
+        android:elevation="10dp"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/facebook_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewSignInBody"
+        app:layout_constraintEnd_toStartOf="@id/imageButton_google"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription,RtlHardcoded"
+        tools:targetApi="lollipop" />
+
+    <!--BOTON TWITTER - IZQUIERDA-->
+    <ImageButton
+        android:id="@+id/imageButton_instagram"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="15dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/floating_sign_in_button"
+        android:elevation="10dp"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/instagram_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewSignInBody"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_google"
+        tools:ignore="ContentDescription,RtlHardcoded,UnusedAttribute" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

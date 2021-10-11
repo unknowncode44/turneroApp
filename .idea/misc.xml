@@ -23,13 +23,16 @@
         <entry key="app/src/main/res/drawable/shape_toolbar01.xml" value="0.5574074074074075" />
         <entry key="app/src/main/res/drawable/shape_toolbar02.xml" value="0.33" />
         <entry key="app/src/main/res/drawable/shape_toolbar03.xml" value="0.22" />
+        <entry key="app/src/main/res/drawable/shape_toolbar04.xml" value="0.3" />
         <entry key="app/src/main/res/font-v26/rubik_font_family.xml" value="0.225" />
         <entry key="app/src/main/res/font/rubik_font_family.xml" value="0.5462962962962963" />
         <entry key="app/src/main/res/layout-v21/activity_sign_in.xml" value="0.33" />
-        <entry key="app/src/main/res/layout-v21/row_doctor_card.xml" value="0.3255208333333333" />
+        <entry key="app/src/main/res/layout-v21/row_doctor_card.xml" value="0.5" />
+        <entry key="app/src/main/res/layout-v28/activity_dashboard_user.xml" value="0.2359375" />
+        <entry key="app/src/main/res/layout-v28/activity_dashboard_user_backUp.xml" value="0.3235897435897436" />
         <entry key="app/src/main/res/layout-v28/row_doctor_card.xml" value="0.17708333333333334" />
         <entry key="app/src/main/res/layout/activity_dashboard_admin.xml" value="0.5992478061011283" />
-        <entry key="app/src/main/res/layout/activity_dashboard_user.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_dashboard_user.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.1" />

@@ -4,73 +4,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/White"
+    android:background="@color/WhiteSmoke"
     >
 
     <!--  Empezamos por la appbar  -->
 
-    <LinearLayout
+
+
+    <RelativeLayout
         android:id="@+id/toolbarRL"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@drawable/shape_toolbar01"
-        android:gravity="start"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:background="@drawable/shape_toolbar02">
+        
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="60dp">
-            <TextView
-                android:paddingHorizontal="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:fontFamily="@font/rubik_regular"
-                android:text="Encuentra tu"
-                android:textColor="@color/Black"
-                android:textSize="22sp" />
+            android:text="@string/pantalla_inicial"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:textAlignment="center"
+            android:padding="25dp"
+            android:textColor="@color/White"
+            android:fontFamily="@font/rubik_regular"
+            android:textSize="20sp"/>
 
-            <TextView
-                android:paddingHorizontal="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:fontFamily="@font/rubik_semi_bold"
-                android:text="Especialista"
-                android:textColor="@color/Black"
-                android:textSize="24sp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="176dp"
-            android:layout_marginTop="60dp">
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:borderWidth="0dp"
-                android:outlineAmbientShadowColor="@color/White"
-                android:outlineSpotShadowColor="@color/White"
-                android:backgroundTint="@color/White"
-                android:elevation="0dp"
-                android:src="@drawable/ic_search_24_black"/>
-        </LinearLayout>
-    </LinearLayout>
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_marginTop="120dp"
-        android:background="@drawable/shape_toolbar04"
+        android:background="@drawable/shape_toolbar03"
         android:outlineAmbientShadowColor="@color/Gray"
         android:padding="1dp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_dr_cards"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+
+            >
+
+
         </androidx.recyclerview.widget.RecyclerView>
 
 

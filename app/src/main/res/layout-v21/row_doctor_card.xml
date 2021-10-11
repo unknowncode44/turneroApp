@@ -13,68 +13,200 @@
     app:cardElevation="5dp"
     android:backgroundTint="@color/Secondary">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
+    <!-- ###  CAJA PRINCIPAL  ###  -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
-        android:padding="2dp">
+        android:padding="2dp"
+        android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/doctor_image"
+        <!--  ## CAJA IMAGEN ##-->
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/doctor1">
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:orientation="horizontal">
 
-        </ImageView>
-        <!--titulo-->
-        <TextView
-            android:id="@+id/doctor_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="120dp"
-            android:text="Doctor Nick Rivera"
-            android:fontFamily="@font/rubik_regular"
-            android:textFontWeight="600"
-            android:textColor="@color/White"
-            android:textSize="24sp">
+            <!--  ## IMAGEN ##-->
+            <ImageView
+                android:id="@+id/doctor_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/doctor1"
+                tools:ignore="ContentDescription">
+            </ImageView>
+        </LinearLayout>
 
-        </TextView>
-        <!--    informacion del doctor    -->
-        <TextView
-            android:id="@+id/doctor_information"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="120dp"
-            android:layout_marginTop="10dp"
-            android:text="Especialidad: Pediatra
-                          Atiende: L-V 9:00 a 17:00
-                          Prox. Turno Disp.: 18/09/21"
-            android:layout_below="@+id/doctor_title"
-            android:fontFamily="@font/rubik_regular"
-            android:textFontWeight="200"
-            android:textColor="@color/White"
-            android:textSize="16sp"
-            tools:ignore="HardcodedText,UnusedAttribute">
+        <!--  ## CAJA TEXTO ##-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
 
-        </TextView>
+            <!--  ## CAJA TITULO ##-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp">
+                <!--  ## DOCTOR NAME ##-->
+                <TextView
+                    android:id="@+id/doctor_name"
+                    android:layout_gravity="start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Roberto Aqueveque"
+                    android:fontFamily="@font/rubik_semi_bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/White"/>
+            </LinearLayout>
+            <!--  ## CAJA ESPECIALIDAD ##-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:orientation="horizontal"
+                >
 
-        <Button
-            android:id="@+id/request_appointment_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_below="@+id/doctor_information"
-            android:layout_marginStart="145dp"
-            android:layout_marginTop="25dp"
-            android:elevation="10dp"
-            android:enabled="true"
-            android:fontFamily="@font/rubik_regular"
-            android:text="@string/solicitar_turno"
-            android:textSize="14sp"
-            app:backgroundTint="@color/Primary">
+                <!--  ## MATRICULA PROF ##-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mat_prof_nro"
+                    android:fontFamily="@font/rubik_medium"
+                    android:textSize="16sp"
+                    android:textColor="@color/White"/>
 
-        </Button>
+                <!--  ## NUMERO MAT. PROF ##-->
+                <TextView
+                    android:id="@+id/mat_prof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TU455662"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="5dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/White"/>
+            </LinearLayout>
+
+            <!--  ## CAJA ESPECIALIDAD ##-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:orientation="horizontal"
+                >
+
+                <!--  ## ESPECIALIDAD ##-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/especialidad"
+                    android:fontFamily="@font/rubik_medium"
+                    android:textSize="16sp"
+                    android:textColor="@color/White"/>
+
+                <!--  ## ESPECIALIDAD ##-->
+                <TextView
+                    android:id="@+id/speciality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Neurocirujia"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="5dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/White"/>
+            </LinearLayout>
+
+            <!--  ## CAJA DIAS SEMANA ##-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:orientation="horizontal"
+                >
+
+                <!--  ## DIAS ATIENDE ##-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/atiende"
+                    android:fontFamily="@font/rubik_medium"
+                    android:textSize="16sp"
+                    android:textColor="@color/White"/>
+
+                <!--  ## WEEK DAYS ##-->
+                <TextView
+                    android:id="@+id/ate_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lu-Ma-Mi-Ju-Vi-Sa-Do"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/White"/>
+            </LinearLayout>
+
+            <!--  ## CAJA HORARIOS ##-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:orientation="horizontal"
+                >
+
+                <!--  ## HORARIOS ##-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/horario"
+                    android:fontFamily="@font/rubik_medium"
+                    android:textSize="16sp"
+                    android:textColor="@color/White"/>
+
+                <!--  ## HORA ##-->
+                <TextView
+                    android:id="@+id/ate_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10Am - 14pm"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="5dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/White"/>
+            </LinearLayout>
+
+            <!--  ## CAJA BOTONES##-->
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:orientation="horizontal">
+
+                <!--  ## BOTON MAS INFO ##-->
+                <Button
+                    android:layout_marginHorizontal="10dp"
+                    android:elevation="10dp"
+                    android:textSize="16sp"
+                    android:text="@string/mas_info"
+                    android:fontFamily="@font/rubik_semi_bold"
+                    android:textColor="@color/White"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/Primary"
+                    style="?android:attr/buttonBarButtonStyle"
+                    tools:ignore="SmallSp" />
 
 
-    </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>

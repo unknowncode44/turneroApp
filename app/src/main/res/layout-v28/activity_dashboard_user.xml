@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="60dp">
+            android:layout_marginTop="70dp">
             <TextView
                 android:paddingHorizontal="10dp"
                 android:layout_width="wrap_content"
@@ -30,7 +30,7 @@
                 android:fontFamily="@font/rubik_regular"
                 android:text="Encuentra tu"
                 android:textColor="@color/Black"
-                android:textSize="22sp" />
+                android:textSize="24sp" />
 
             <TextView
                 android:paddingHorizontal="10dp"
@@ -40,13 +40,13 @@
                 android:fontFamily="@font/rubik_semi_bold"
                 android:text="Especialista"
                 android:textColor="@color/Black"
-                android:textSize="24sp" />
+                android:textSize="26sp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="176dp"
-            android:layout_marginTop="60dp">
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="70dp">
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="125dp"
         android:background="@drawable/shape_toolbar04"
         android:outlineAmbientShadowColor="@color/Gray"
         android:padding="1dp">
@@ -70,8 +70,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_dr_cards"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </androidx.recyclerview.widget.RecyclerView>
+            android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
 
 
     </RelativeLayout>

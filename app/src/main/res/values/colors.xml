@@ -4,6 +4,8 @@
     <color name="Primary"> #7cdbe3</color>
     <color name="SecondaryTwo">#d989d4</color>
     <color name="Secondary">#8572f0</color>
+    <color name="Secondary_light">#5564eb</color>
+    <color name="Secondary_Dark">#009b7d</color>
     <color name="RedAccent">#ff6f63</color>
     <color name="BorderGray">#737474</color>
     <color name="White">#FFFFFF</color>

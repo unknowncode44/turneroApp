@@ -15,10 +15,8 @@ public class SignInFragmentAdapter extends FragmentStateAdapter {
     @Override
     public Fragment createFragment(int position) {
 //        creamos un switch para pasar entre tabs
-        switch (position){
-
-            case 1:
-                return new TabRegisterFragment();
+        if (position == 1) {
+            return new TabRegisterFragment();
         }
 
 

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+>
+
+<!--    &lt;!&ndash;  Empezamos por la appbar  &ndash;&gt;-->
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/toolbarRL"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="300dp"-->
+<!--        android:background="@drawable/shape_toolbar01">-->
+<!--        &lt;!&ndash;colocamos flecha para volver a pantalla anterior&ndash;&gt;-->
+<!--        <ImageButton-->
+<!--            android:id="@+id/backBtn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="70dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            android:minWidth="48dp"-->
+<!--            android:minHeight="48dp"-->
+<!--            android:padding="10dp"-->
+<!--            android:src="@drawable/ic_baseline_arrow_back_24" />-->
+
+<!--        &lt;!&ndash;colocamos icono&ndash;&gt;-->
+<!--        <ImageView-->
+<!--            android:id="@+id/iconIv"-->
+<!--            android:layout_width="110dp"-->
+<!--            android:layout_height="110dp"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_marginTop="70dp"-->
+<!--            android:contentDescription="@string/todo"-->
+<!--            android:src="@drawable/schedule" />-->
+<!--        &lt;!&ndash;colocamos un texto&ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_below="@+id/iconIv"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:fontFamily="@font/rubik_regular"-->
+<!--            android:text="@string/ingresa_con_tu_email_y_contrasena"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/White"-->
+<!--            android:textSize="22sp" />-->
+
+
+<!--    </RelativeLayout>-->
+
+<!--    &lt;!&ndash;creamos un scrollview para colocar el formulario&ndash;&gt;-->
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginStart="30dp"-->
+<!--        android:layout_marginTop="250dp"-->
+<!--        android:layout_marginEnd="30dp"-->
+<!--        android:paddingHorizontal="10dp">-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            &lt;!&ndash;campo email&ndash;&gt;-->
+<!--            <com.google.android.material.text field.TextInputLayout-->
+<!--                android:id="@+id/emailInput"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:boxBackgroundMode="none"-->
+<!--                app:hintEnabled="false">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/loginEmailEt"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="60dp"-->
+<!--                    android:autofillHints="false"-->
+<!--                    android:background="@drawable/shape_edit_text01"-->
+<!--                    android:drawableStart="@drawable/ic_input_email"-->
+<!--                    android:drawablePadding="10dp"-->
+<!--                    android:hint="@string/email"-->
+<!--                    android:inputType="textEmailAddress"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:textColor="@color/Black"-->
+<!--                    android:textColorHint="@color/DarkGray"-->
+<!--                    app:boxBackgroundMode="none" />-->
+
+<!--            </com.google.android.material.text field.TextInputLayout>-->
+
+<!--            &lt;!&ndash;campo contrasena&ndash;&gt;-->
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:id="@+id/passwordInput"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/emailInput"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                app:boxBackgroundMode="none"-->
+<!--                app:hintEnabled="false"-->
+<!--                app:passwordToggleEnabled="true">-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/loginPasswordEt"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="60dp"-->
+<!--                    android:autofillHints="false"-->
+<!--                    android:background="@drawable/shape_edit_text01"-->
+<!--                    android:drawableStart="@drawable/ic_lock_input"-->
+<!--                    android:drawablePadding="10dp"-->
+<!--                    android:hint="@string/contrasena"-->
+<!--                    android:inputType="textPassword"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:textColor="@color/Black"-->
+<!--                    android:textColorHint="@color/DarkGray" />-->
+
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            &lt;!&ndash;recuperar contrasena&ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/olvidaste_contrasena"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/passwordInput"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:padding="5dp"-->
+<!--                android:text="@string/olvide_mi_contrasena" />-->
+
+<!--            &lt;!&ndash;boton de ingreso&ndash;&gt;-->
+<!--            <Button-->
+<!--                android:id="@+id/login_Btn"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/olvidaste_contrasena"-->
+<!--                android:background="@drawable/shape_button01"-->
+<!--                android:fontFamily="@font/rubik_regular"-->
+<!--                android:text="@string/ingresa2"-->
+<!--                android:textColor="@color/White"-->
+<!--                app:backgroundTint="@color/Secondary" />-->
+
+
+<!--        </RelativeLayout>-->
+
+
+<!--    </ScrollView>-->
+
+<!--    &lt;!&ndash;si no tenes cuenta...&ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/noAccountText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:padding="15dp"-->
+<!--        android:text="@string/no_tenes_cuenta_toca_aca"-->
+
+
+<!--        />-->
+
+
+</RelativeLayout>

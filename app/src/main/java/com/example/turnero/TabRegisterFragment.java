@@ -109,7 +109,7 @@ public class TabRegisterFragment extends Fragment {
                 String uid = Objects.requireNonNull(auth.getCurrentUser()).getUid();
 
                 // ## Creamos un objeto con el nombre y el email capturados a fin de guardarlos en la base de datos
-                Object user = new User(name, email, "x-user");
+                Object user = new User2(name, email, "x-user");
 
                 // ## Una vez obtenemos el uid lo usamos para guardar el usuario en la base de datos
                 database.child("users/users").child(uid).setValue(user);

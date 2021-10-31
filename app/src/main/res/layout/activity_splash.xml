@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--definimos un layout relativo-->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient01"
-    tools:context=".SplashActivity" >
+    tools:context=".SplashActivity">
 
     <!--  anidamos un linear layout  -->
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
         android:background="@drawable/gradient01"
+        android:gravity="center"
 
-        >
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:layout_width="200dp"
@@ -29,24 +34,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:fontFamily="@font/rubik_medium"
             android:text="@string/turnero_app"
             android:textColor="@color/DarkSlateGray"
             android:textSize="28sp"
-            android:textStyle="normal"
-            android:fontFamily="@font/rubik_medium"/>
+            android:textStyle="normal" />
 
 
     </LinearLayout>
 
-<!--  agregamos un texto debajo  -->
+    <!--  agregamos un texto debajo  -->
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:paddingBottom="25dp"
         android:text="@string/desarrollado_por_unknowncode"
-        android:layout_centerHorizontal="true"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

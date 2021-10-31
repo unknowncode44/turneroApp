@@ -27,8 +27,9 @@
         <entry key="app/src/main/res/font-v26/rubik_font_family.xml" value="0.225" />
         <entry key="app/src/main/res/font/rubik_font_family.xml" value="0.5462962962962963" />
         <entry key="app/src/main/res/layout-v21/activity_sign_in.xml" value="0.33" />
+        <entry key="app/src/main/res/layout-v21/available_doctor_card.xml" value="0.33" />
         <entry key="app/src/main/res/layout-v21/row_doctor_card.xml" value="0.5" />
-        <entry key="app/src/main/res/layout-v28/activity_dashboard_user.xml" value="0.2359375" />
+        <entry key="app/src/main/res/layout-v28/activity_dashboard_user.xml" value="0.25" />
         <entry key="app/src/main/res/layout-v28/activity_dashboard_user_backUp.xml" value="0.3235897435897436" />
         <entry key="app/src/main/res/layout-v28/row_doctor_card.xml" value="0.17708333333333334" />
         <entry key="app/src/main/res/layout/activity_dashboard_admin.xml" value="0.5992478061011283" />
@@ -38,7 +39,8 @@
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_register2.xml" value="0.47136752136752136" />
         <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.2" />
-        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/available_doctor_card.xml" value="0.33" />
         <entry key="app/src/main/res/layout/card_items.xml" value="0.5992478061011283" />
         <entry key="app/src/main/res/layout/fragment_tab_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_tab_register.xml" value="0.25" />
@@ -47,6 +49,7 @@
         <entry key="app/src/main/res/layout/row_doctor_cards.xml" value="0.32864583333333336" />
         <entry key="app/src/main/res/layout/sign_in_fragments/login_tab_fragment.xml" value="0.14722222222222223" />
         <entry key="app/src/main/res/layout/signup_tab_fragment.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/speciality_icon_card.xml" value="0.4266851980542043" />
         <entry key="app/src/main/res/layout/splash_screen.xml" value="0.5" />
         <entry key="app/src/main/res/layout/vista_ejemplo.xml" value="0.5992478061011283" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_google_fab.xml" value="0.2635416666666667" />

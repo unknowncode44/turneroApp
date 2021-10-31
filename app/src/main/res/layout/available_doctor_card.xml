@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    android:elevation="10dp"
+    android:backgroundTint="@color/WhiteSmoke"
+    android:padding="2dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:paddingHorizontal="5dp"
+                android:orientation="vertical"
+                android:gravity="start">
+
+                <!--texto-->
+                <!--                titulo-->
+                <TextView
+                    android:id="@+id/available_doctor_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dr. Matias Orellana"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/rubik_semi_bold"/>
+                <!--                subtititulo-->
+                <TextView
+                    android:id="@+id/available_doctor_subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Endocrinologia"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/rubik_light"/>
+                <!--                rating-->
+                <RatingBar
+                    android:id="@+id/doctor_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:numStars="5"
+                    android:isIndicator="true"
+                    android:layout_marginBottom="15dp"/>
+                <!--                experience-->
+                <TextView
+                    android:id="@+id/available_doctor_experience"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Experiencia"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/rubik_semi_bold"/>
+                <!--                anos de experiencia-->
+                <TextView
+                    android:id="@+id/doctor_experience_years"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10 años"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/rubik_light"
+                    android:layout_marginBottom="12dp"/>
+                <!--                pacientes-->
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pacientes atendidos"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/rubik_light"/>
+                <TextView
+                    android:id="@+id/cantidad_pacientes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10k"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/rubik_regular"/>
+
+
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:paddingVertical="25dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/doctor1"/>
+                <!--texto-->
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

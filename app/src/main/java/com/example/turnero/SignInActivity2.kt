@@ -1,97 +1,65 @@
-package com.example.turnero;
+package com.example.turnero
 
-import static com.example.turnero.R.id.signIn_ViewPager2;
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.tabs.TabLayout
+import androidx.viewpager2.widget.ViewPager2
+import com.example.turnero.adapters.SignInFragmentAdapter
+import android.widget.ImageButton
+import android.os.Bundle
+import com.example.turnero.R.id
+import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
+import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 
-import android.os.Bundle;
-import android.widget.ImageButton;
+class SignInActivity2 : AppCompatActivity() {
+    //Instanciamos el adapter
+    var adapter: SignInFragmentAdapter? = null
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.viewpager2.widget.ViewPager2;
+    var v = 0f
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_sign_in)
 
-import com.google.android.material.tabs.TabLayout;
-
-public class SignInActivity2 extends AppCompatActivity {
-
-    // creamos las variables nuestro xml que asignaremos mas abajo
-    TabLayout tabLayout;
-    ViewPager2 viewPager2;
-    SignInFragmentAdapter adapter;
-
-    // variables para los hermosos botones de red social que me dieron dolores de cabeza pero quedaron geniales
-    ImageButton fb;
-    ImageButton google_icon;
-    ImageButton inst;
-    float v = 0;
+        // variables para los hermosos botones de red social que me dieron dolores de cabeza pero quedaron geniales
+        val fb: ImageButton = findViewById(id.imageButton_facebook)
+        val googleIcon: ImageButton = findViewById(id.imageButton_google)
+        val inst: ImageButton = findViewById(id.imageButton_instagram)
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_in);
-
-        // Asignamos las variables
-        fb = findViewById(R.id.imageButton_facebook);
-        google_icon = findViewById(R.id.imageButton_google);
-        inst = findViewById(R.id.imageButton_instagram);
-        tabLayout = findViewById(R.id.signInTabLayout);
+        val tabLayout: TabLayout = findViewById(id.signInTabLayout)
 
         // ## Animamos los botones y el tabLayout
-        fb.setTranslationX(-800);
-        google_icon.setTranslationY(-200);
-        inst.setTranslationX(800);
-        tabLayout.setTranslationY(100);
+        fb.translationX = -800f
+        googleIcon.translationY = -200f
+        inst.translationX = 800f
+        tabLayout.translationY = 100f
+        fb.alpha = v
+        googleIcon.alpha = v
+        inst.alpha = v
+        tabLayout.alpha = v
+        fb.animate().translationX(0f).alpha(1f).setDuration(1200).setStartDelay(600).start()
+        googleIcon.animate().translationY(0f).alpha(1f).setDuration(1200).setStartDelay(600).start()
+        inst.animate().translationX(0f).alpha(1f).setDuration(1200).setStartDelay(600).start()
+        tabLayout.animate().translationY(0f).alpha(1f).setDuration(1200).setStartDelay(600).start()
 
-        fb.setAlpha(v);
-        google_icon.setAlpha(v);
-        inst.setAlpha(v);
-        tabLayout.setAlpha(v);
-
-        fb.animate().translationX(0).alpha(1).setDuration(1200).setStartDelay(600).start();
-        google_icon.animate().translationY(0).alpha(1).setDuration(1200).setStartDelay(600).start();
-        inst.animate().translationX(0).alpha(1).setDuration(1200).setStartDelay(600).start();
-        tabLayout.animate().translationY(0).alpha(1).setDuration(1200).setStartDelay(600).start();
-
-
-
-
-
-
-        tabLayout = findViewById(R.id.signInTabLayout);
-        viewPager2 = findViewById(signIn_ViewPager2);
-
-        FragmentManager fm = getSupportFragmentManager();
-        adapter = new SignInFragmentAdapter(fm, getLifecycle());
-        viewPager2.setAdapter(adapter);
-
-        tabLayout.addTab(tabLayout.newTab().setText("INGRESA"));
-        tabLayout.addTab(tabLayout.newTab().setText("REGISTRATE"));
-
-        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager2.setCurrentItem(tab.getPosition());
+        val viewPager2: ViewPager2 = findViewById(id.signIn_ViewPager2)
+        val fm = supportFragmentManager
+        adapter = SignInFragmentAdapter(fm, lifecycle)
+        viewPager2.adapter = adapter
+        tabLayout.addTab(tabLayout.newTab().setText("INGRESA"))
+        tabLayout.addTab(tabLayout.newTab().setText("REGISTRATE"))
+        tabLayout.tabGravity = TabLayout.GRAVITY_FILL
+        tabLayout.addOnTabSelectedListener(object : OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab) {
+                viewPager2.currentItem = tab.position
             }
 
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
+            override fun onTabUnselected(tab: TabLayout.Tab) {}
+            override fun onTabReselected(tab: TabLayout.Tab) {}
+        })
+        viewPager2.registerOnPageChangeCallback(object : OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                tabLayout.selectTab(tabLayout.getTabAt(position))
             }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
-
-        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(int position) {
-                tabLayout.selectTab(tabLayout.getTabAt(position));
-            }
-        });
-
+        })
     }
 }

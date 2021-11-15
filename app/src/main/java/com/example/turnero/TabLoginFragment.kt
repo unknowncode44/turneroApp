@@ -1,125 +1,115 @@
-package com.example.turnero;
+package com.example.turnero
+
+import com.google.firebase.auth.FirebaseAuth
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import com.example.turnero.R
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.auth.AuthResult
+import android.content.Intent
+import android.view.View
+import android.widget.Button
+import androidx.fragment.app.Fragment
+import com.example.turnero.DashboardUserActivity
+import com.example.turnero.databinding.FragmentTabLoginBinding
+import com.google.android.gms.tasks.Task
+import java.util.*
 
 // #### IMPORTAMOS ####
-
 // NATIVO
-import android.content.Intent;
-import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
-
 // DATABINDING
-import com.example.turnero.databinding.FragmentTabLoginBinding;
-
 // FIREBASE
-import com.google.firebase.auth.FirebaseAuth;
-
 // JAVA
-import java.util.Objects;
-
-
-public class TabLoginFragment extends Fragment {
-
+class TabLoginFragment : Fragment() {
     // VARIABLES MAIN
-    private FirebaseAuth auth;
+    private var auth: FirebaseAuth? = null
+
     // VARIABLES ANIMACION
-    float v = 0;
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
+    var v = 0f
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
     }
 
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         // Inflate the layout for this fragment
-        com.example.turnero.databinding.FragmentTabLoginBinding binding = FragmentTabLoginBinding.inflate(inflater, container, false);
-        View view = binding.getRoot();
+        val binding = FragmentTabLoginBinding.inflate(inflater, container, false)
+        val view: View = binding.root
 
         // ## Obtenemos la instancia de FirebaseAuth
-        auth = FirebaseAuth.getInstance();
+        auth = FirebaseAuth.getInstance()
 
         // ## Creamos e instanciamos las variables donde obtendremos los datos de registro
-        final View fragmentBody = view.findViewById(R.id.login_fragmentBody);
-        final Button btnLogin = view.findViewById(R.id.login_Btn);
-        final EditText login_email = view.findViewById(R.id.login_email);
-        final EditText login_password = view.findViewById(R.id.login_password);
-        final TextView fgt_password = view.findViewById(R.id.fgtPass);
+        val fragmentBody = view.findViewById<View>(R.id.login_fragmentBody)
+        val btnLogin = view.findViewById<Button>(R.id.login_Btn)
+        val loginEmail = view.findViewById<EditText>(R.id.login_email)
+        val loginPassword = view.findViewById<EditText>(R.id.login_password)
+        val fgtPassword = view.findViewById<TextView>(R.id.fgtPass)
 
         // ## Utilidad para esconder el teclado cuando tocamos otra parte de la pantalla
-        Utilities.setupUI(fragmentBody, getActivity());
+        Utilities.setupUI(fragmentBody, activity)
 
         // ## Animacion de los campos de texto
-        login_email.setTranslationX(800);
-        login_password.setTranslationX(800);
-        fgt_password.setTranslationX(800);
-        btnLogin.setTranslationY(-200);
-
-        login_email.setAlpha(v);
-        login_password.setAlpha(v);
-        btnLogin.setAlpha(v);
-        fgt_password.setAlpha(v);
-
-        login_email.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
-        login_password.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
-        fgt_password.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
-        btnLogin.animate().translationY(0).alpha(1).setDuration(1200).setStartDelay(600).start();
-
+        loginEmail.translationX = 800f
+        loginPassword.translationX = 800f
+        fgtPassword.translationX = 800f
+        btnLogin.translationY = -200f
+        loginEmail.alpha = v
+        loginPassword.alpha = v
+        btnLogin.alpha = v
+        fgtPassword.alpha = v
+        loginEmail.animate().translationX(0f).alpha(1f).setDuration(800).setStartDelay(300).start()
+        loginPassword.animate().translationX(0f).alpha(1f).setDuration(800).setStartDelay(500)
+            .start()
+        fgtPassword.animate().translationX(0f).alpha(1f).setDuration(800).setStartDelay(500)
+            .start()
+        btnLogin.animate().translationY(0f).alpha(1f).setDuration(1200).setStartDelay(600).start()
 
 
         // #### CUANDO PULSAMOS EL BOTON DE INGRESO ####
-        btnLogin.setOnClickListener(view1 -> {
+        btnLogin.setOnClickListener { view1: View? ->
 
             // ## Obtenemos los datos desde editText instanciado mas arriba
-            String loginEmail = login_email.getText().toString();
-            String loginPassword = login_password.getText().toString();
+            val loginEmailText = loginEmail.text.toString()
+            val loginPasswordText = loginPassword.text.toString()
 
             // #### Condiciones: ####
             // ## 1- si la contrasena es menor a 6, enviar toast ##
-            if(loginPassword.length() >= 6){
+            if (loginPasswordText.length >= 6) {
                 // ## Utilizamos el metodo login para acceder con las credenciales proporcionadas
-                login(loginEmail, loginPassword);
+                login(loginEmailText, loginPasswordText)
+            } else {
+                Toast.makeText(context, "La contrasena es muy corta", Toast.LENGTH_LONG).show()
             }
-            else {
-                Toast.makeText(getContext(), "La contrasena es muy corta", Toast.LENGTH_LONG).show();
-            }
-
-        });
-
-        return view;
+        }
+        return view
     }
 
     // #### METODO PRINCIPAL DE INGRESO POR EMAIL Y CONTRASENA ####
-    public void login(String email, String password){
+    fun login(email: String?, password: String?) {
 
         // ## Utilizamos el metodo signInWithEmailAndPassword de FirebaseAuth, y le agregamos un listener para ver si el registro fue exitoso
-        auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(requireActivity(), task->{
+        auth!!.signInWithEmailAndPassword(email!!, password!!)
+            .addOnCompleteListener(requireActivity()) { task: Task<AuthResult?> ->
 
-        // ## Si el ingreso fue exitoso haremos lo siguiente:
-            if (task.isSuccessful()){
-                // ## Indicamos a traves de un toast que el usuario ingreso exitosamente
-                Toast.makeText(getContext(), "Login exitoso, bienvenido", Toast.LENGTH_LONG).show();
+                // ## Si el ingreso fue exitoso haremos lo siguiente:
+                if (task.isSuccessful) {
+                    // ## Indicamos a traves de un toast que el usuario ingreso exitosamente
+                    Toast.makeText(context, "Login exitoso, bienvenido", Toast.LENGTH_LONG).show()
 
-                // ## Navegamos a la pagina de inicio
-                Intent intent_ = new Intent(getContext(), DashboardUserActivity.class);
-                startActivity(intent_);
+                    // ## Navegamos a la pagina de inicio
+                    val intent_ = Intent(context, DashboardUserActivity::class.java)
+                    startActivity(intent_)
+                } else {
+                    val errorMessage = Objects.requireNonNull(task.exception)?.localizedMessage
+                    Toast.makeText(context, "Hubo un error$errorMessage", Toast.LENGTH_LONG).show()
+                }
             }
-            // ## Si tenemos errores mostramos un Toast
-            else{
-                String errorMessage = Objects.requireNonNull(task.getException()).getLocalizedMessage();
-                Toast.makeText(getContext(), "Hubo un error"+errorMessage, Toast.LENGTH_LONG).show();
-            }
-
-        });
-
     }
 }

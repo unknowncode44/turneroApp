@@ -2,6 +2,8 @@ package com.example.turnero
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toolbar
+import androidx.appcompat.app.ActionBar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.turnero.adapters.DoctorCardAdapter
@@ -10,10 +12,11 @@ import com.example.turnero.adapters.SpecialityCardAdapter
 import com.example.turnero.dataclass.OnlineDoctor
 import com.example.turnero.dataclass.Profesional
 import com.example.turnero.dataclass.Speciality
+import com.example.turnero.databinding.DashboardUserBarBinding
 import com.google.firebase.database.*
 
 
-class DashboardUserActivity : AppCompatActivity() {
+class DashboardUserActivity : AppCompatActivity(){
     lateinit var dbRef : DatabaseReference
     lateinit var doctorCardsRecyclerView: RecyclerView
     lateinit var specialitiesRecyclerView: RecyclerView
@@ -22,10 +25,22 @@ class DashboardUserActivity : AppCompatActivity() {
     lateinit var specialitiesArrayList: ArrayList<Speciality>
     lateinit var onlineArrayList: ArrayList<OnlineDoctor>
     lateinit var adapter: DoctorCardAdapter
+    private lateinit var binding: DashboardUserBarBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dashboard_user)
+        binding = DashboardUserBarBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+
+        setSupportActionBar(binding)
+
+        val ab: ActionBar? = supportActionBar
+        if(ab != null){
+            ab.setHomeAsUpIndicator(R.drawable.nav_icon)
+            ab.setDisplayHomeAsUpEnabled(true)
+            ab.title = "Nombre de Usuario"
+        }
 
         //doctorCardsRecyclerView = findViewById(R.id.recycler_dr_cards)
         //doctorCardsRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
@@ -48,6 +63,10 @@ class DashboardUserActivity : AppCompatActivity() {
         //getSpecialityData()
         //getAvailableDoctor()
 
+
+    }
+
+    private fun toolbarFun(toolbar: Toolbar){
 
     }
 

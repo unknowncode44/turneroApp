@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     // documentacion: https://developer.android.com/topic/libraries/view-binding?hl=es-419
 
     // creamos la variable binding diciendo que es una instancia de la clase ActivityMainBinding
-    private lateinit var binding:ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

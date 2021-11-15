@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.turnero.databinding.FragmentTabRegisterBinding
 import com.example.turnero.dataclass.User2
+import com.example.turnero.utilities.Utilities
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth

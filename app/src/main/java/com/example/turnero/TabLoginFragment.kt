@@ -4,18 +4,16 @@ import com.google.firebase.auth.FirebaseAuth
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.example.turnero.R
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import android.content.Intent
 import android.view.View
 import android.widget.Button
 import androidx.fragment.app.Fragment
-import com.example.turnero.DashboardUserActivity
 import com.example.turnero.databinding.FragmentTabLoginBinding
+import com.example.turnero.utilities.Utilities
 import com.google.android.gms.tasks.Task
 import java.util.*
 

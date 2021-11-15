@@ -1,25 +1,24 @@
-package com.example.turnero
+package com.example.turnero.utilities
 
 import android.app.Activity
 import android.widget.EditText
-import android.view.View.OnTouchListener
 import android.annotation.SuppressLint
-import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
+import androidx.fragment.app.FragmentActivity
 
 object Utilities {
     @SuppressLint("ClickableViewAccessibility")
     @JvmStatic
-    fun setupUI(view: View, activity: Activity) {
+    fun setupUI(view: View, activity!!: FragmentActivity?) {
         // si estamos no estamos en una instancia de EditText y tocamos la pantalla, el teclado se escondera.
         if (view !is EditText) {
             // colocamos una escucha para detectar los toques en la pantalla
             view.setOnTouchListener(View.OnTouchListener
             // si hay toques, llamamos al metodo hideSoftKeyboard
             { _, _ ->
-                hideSoftKeyboard(activity)
+                hideSoftKeyboard(activity!!)
                 false
             })
         }

@@ -27,26 +27,26 @@ class DashboardUserActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard_user)
 
-        doctorCardsRecyclerView = findViewById(R.id.recycler_dr_cards)
-        doctorCardsRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        doctorCardsRecyclerView.setHasFixedSize(true)
+        //doctorCardsRecyclerView = findViewById(R.id.recycler_dr_cards)
+        //doctorCardsRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        //doctorCardsRecyclerView.setHasFixedSize(true)
 
-        specialitiesRecyclerView = findViewById(R.id.specialitiesRecyclerView)
-        specialitiesRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        specialitiesRecyclerView.setHasFixedSize(true)
+        //specialitiesRecyclerView = findViewById(R.id.specialitiesRecyclerView)
+        //specialitiesRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        //specialitiesRecyclerView.setHasFixedSize(true)
 
-        availableRecyclerView = findViewById(R.id.available_doctor_recycler)
-        availableRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        specialitiesRecyclerView.setHasFixedSize(true)
+        //availableRecyclerView = findViewById(R.id.available_doctor_recycler)
+        //availableRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        //specialitiesRecyclerView.setHasFixedSize(true)
 
 
-        specialitiesArrayList = arrayListOf<Speciality>()
-        professionalArrayList = arrayListOf<Profesional>()
-        onlineArrayList = arrayListOf<OnlineDoctor>()
+        //specialitiesArrayList = arrayListOf<Speciality>()
+        //professionalArrayList = arrayListOf<Profesional>()
+       // onlineArrayList = arrayListOf<OnlineDoctor>()
 
-        getProfesionalData()
-        getSpecialityData()
-        getAvailableDoctor()
+        //getProfesionalData()
+        //getSpecialityData()
+        //getAvailableDoctor()
 
 
     }
@@ -81,7 +81,7 @@ class DashboardUserActivity : AppCompatActivity() {
                 }
             }
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+
             }
         })
     }
@@ -92,13 +92,15 @@ class DashboardUserActivity : AppCompatActivity() {
                 if (snapshot.exists()){
                     for (onlineSnapshot in snapshot.children){
                         val online = onlineSnapshot.getValue(OnlineDoctor::class.java)
-                        onlineArrayList.add(online!!)
+                        if (online != null) {
+                            onlineArrayList.add(online)
+                        }
                     }
                     availableRecyclerView.adapter = OnlineDoctorsAdapter(onlineArrayList)
                 }
             }
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+
             }
         })
     }

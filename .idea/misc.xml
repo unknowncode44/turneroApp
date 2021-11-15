@@ -7,7 +7,27 @@
         <entry key="../../.gradle/caches/transforms-3/b956959e979c7aa18da012ab59ac31cc/transformed/material-1.4.0/res/layout-land/material_clock_period_toggle_land.xml" value="0.41041666666666665" />
         <entry key="../../.gradle/caches/transforms-3/b956959e979c7aa18da012ab59ac31cc/transformed/material-1.4.0/res/layout/material_clock_period_toggle.xml" value="0.644703497212367" />
         <entry key="../../.gradle/caches/transforms-3/b956959e979c7aa18da012ab59ac31cc/transformed/material-1.4.0/res/layout/material_timepicker_dialog.xml" value="0.246875" />
+        <entry key="..\:/Users/Giuliana/Desktop/Roberto/Proyectos/BASANI/turneroApp/app/src/main/res/layout-v21/activity_sign_in.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Giuliana/Desktop/Roberto/Proyectos/BASANI/turneroApp/app/src/main/res/layout-v21/available_doctor_card.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Giuliana/Desktop/Roberto/Proyectos/BASANI/turneroApp/app/src/main/res/layout-v21/dashboard_user_bar.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Giuliana/Desktop/Roberto/Proyectos/BASANI/turneroApp/app/src/main/res/layout-v28/activity_dashboard_user.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Giuliana/Desktop/Roberto/Proyectos/BASANI/turneroApp/app/src/main/res/layout-v28/activity_dashboard_user_back_up.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Giuliana/Desktop/Roberto/Proyectos/BASANI/turneroApp/app/src/main/res/layout/activity_dashboard_admin.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Giuliana/Desktop/Roberto/Proyectos/BASANI/turneroApp/app/src/main/res/layout/activity_dashboard_user.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Giuliana/Desktop/Roberto/Proyectos/BASANI/turneroApp/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Giuliana/Desktop/Roberto/Proyectos/BASANI/turneroApp/app/src/main/res/layout/activity_sign_in.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Giuliana/Desktop/Roberto/Proyectos/BASANI/turneroApp/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Giuliana/Desktop/Roberto/Proyectos/BASANI/turneroApp/app/src/main/res/layout/available_doctor_card.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Giuliana/Desktop/Roberto/Proyectos/BASANI/turneroApp/app/src/main/res/layout/card_items.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Giuliana/Desktop/Roberto/Proyectos/BASANI/turneroApp/app/src/main/res/layout/dashboard_user_bar.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Giuliana/Desktop/Roberto/Proyectos/BASANI/turneroApp/app/src/main/res/layout/fragment_tab_login.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Giuliana/Desktop/Roberto/Proyectos/BASANI/turneroApp/app/src/main/res/layout/fragment_tab_register.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Giuliana/Desktop/Roberto/Proyectos/BASANI/turneroApp/app/src/main/res/layout/login_tab_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Giuliana/Desktop/Roberto/Proyectos/BASANI/turneroApp/app/src/main/res/layout/row_doctor_card.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Giuliana/Desktop/Roberto/Proyectos/BASANI/turneroApp/app/src/main/res/layout/signup_tab_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Giuliana/Desktop/Roberto/Proyectos/BASANI/turneroApp/app/src/main/res/layout/speciality_icon_card.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Giuliana/Desktop/Roberto/Proyectos/BASANI/turneroApp/app/src/main/res/menu/bottom_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Giuliana/Desktop/Roberto/Proyectos/BASANI/turneroApp/app/src/main/res/menu/menu.xml" value="0.33" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.46979166666666666" />
         <entry key="app/src/main/res/drawable-v24/shape_card04.xml" value="0.6226493940660259" />
         <entry key="app/src/main/res/drawable/edit_text_shape.xml" value="0.29739583333333336" />
@@ -67,5 +87,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.20416666666666666" />
+      </ProjectState>
+    </option>
   </component>
 </project>

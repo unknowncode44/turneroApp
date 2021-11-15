@@ -11,14 +11,16 @@ import androidx.fragment.app.FragmentActivity
 object Utilities {
     @SuppressLint("ClickableViewAccessibility")
     @JvmStatic
-    fun setupUI(view: View, activity!!: FragmentActivity?) {
+    fun setupUI(view: View, activity: FragmentActivity?) {
         // si estamos no estamos en una instancia de EditText y tocamos la pantalla, el teclado se escondera.
         if (view !is EditText) {
             // colocamos una escucha para detectar los toques en la pantalla
             view.setOnTouchListener(View.OnTouchListener
             // si hay toques, llamamos al metodo hideSoftKeyboard
             { _, _ ->
-                hideSoftKeyboard(activity!!)
+                if (activity != null) {
+                    hideSoftKeyboard(activity)
+                }
                 false
             })
         }

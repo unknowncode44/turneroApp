@@ -31,4 +31,13 @@
     <string name="horario">Horario: </string>
     <string name="mas_info">Mas Info</string>
     <string name="mat_prof_nro">Mat. Prof Nro:</string>
+    <string name="esp">¿Sos especialista?</string>
+    <string name="data">Mis datos</string>
+    <string name="turn">Mis turnos</string>
+    <string name="myesp">Mis especialistas</string>
+    <string name="contac">Contactenos</string>
+    <string name="signout">Cerrar sesión</string>
+    <string name="categ">Categorias</string>
+    <string name="now">Atendiendo ahora</string>
+    <string name="esp2">Especialistas</string>
 </resources>

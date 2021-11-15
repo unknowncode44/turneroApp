@@ -1,9 +1,11 @@
-package com.example.turnero
+package com.example.turnero.adapters
 import android.view.LayoutInflater //importamos esta libreria ya que usaremos el metodo inflate para mostrar nuestras cards
 import android.view.View // Necesitamos importar view para la clase MyViewHolder - con esto manipularemos las vistas que deseamos mostrar
 import android.view.ViewGroup // se nos importa al crear los getters de la clase Horizontal_RecyclerView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView // importamos la libreria que nos proporciona el recycler view
+import com.example.turnero.dataclass.Profesional
+import com.example.turnero.R
 
 
 // creamos clase que extiende RecyclerView.Adapter, adicionalmente creamos la sub-clase MyViewHolder para manejar las vistas

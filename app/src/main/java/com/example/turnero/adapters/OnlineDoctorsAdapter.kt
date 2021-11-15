@@ -1,4 +1,4 @@
-package com.example.turnero
+package com.example.turnero.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.turnero.R
+import com.example.turnero.dataclass.OnlineDoctor
 
 class OnlineDoctorsAdapter(private val availableList: List<OnlineDoctor>): RecyclerView.Adapter<OnlineDoctorsAdapter.OnlineDoctorsViewHolder>() {
 

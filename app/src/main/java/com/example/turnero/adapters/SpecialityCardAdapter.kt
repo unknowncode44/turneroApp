@@ -1,4 +1,4 @@
-package com.example.turnero
+package com.example.turnero.adapters
 
 
 import android.view.LayoutInflater
@@ -6,15 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.turnero.R
+import com.example.turnero.dataclass.Speciality
 
 class SpecialityCardAdapter(private val specialityList: List<Speciality>): RecyclerView.Adapter<SpecialityCardAdapter.SpecialityCardViewHolder>()  {
 
     //on create view holder nos traer el diseno de la vista
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SpecialityCardAdapter.SpecialityCardViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SpecialityCardViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.speciality_icon_card, parent, false)
         return SpecialityCardViewHolder(view)
     }
-    override fun onBindViewHolder(holder: SpecialityCardAdapter.SpecialityCardViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: SpecialityCardViewHolder, position: Int) {
 
         val currentItem = specialityList[position]
         holder.specialityName.text = currentItem.name

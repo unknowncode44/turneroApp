@@ -1,4 +1,4 @@
-package com.example.turnero
+package com.example.turnero.dataclass
 
 import android.graphics.drawable.Drawable
 

@@ -1,4 +1,4 @@
-package com.example.turnero;
+package com.example.turnero.javafiles;
 
 // #### IMPORTAMOS ####
 
@@ -15,6 +15,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 // DATABINDING
+import com.example.turnero.DashboardUserActivity;
+import com.example.turnero.R;
+import com.example.turnero.dataclass.User2;
+import com.example.turnero.Utilities;
 import com.example.turnero.databinding.FragmentTabRegisterBinding;
 
 // FIREBASE
@@ -27,7 +31,7 @@ import java.util.Objects;
 
 
 
-public class TabRegisterFragment extends Fragment {
+class TabRegisterFragmentJ extends Fragment {
 
     // VARIABLES MAIN
     private FirebaseAuth auth;

@@ -1,6 +1,3 @@
-package com.example.turnero;
+package com.example.turnero.dataclass
 
-public class User2 {
-    public User2(String name, String email, String s) {
-    }
-}
+data class User2(val name: String?, val email: String?,val s: String?)

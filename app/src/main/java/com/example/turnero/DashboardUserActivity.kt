@@ -4,6 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.turnero.adapters.DoctorCardAdapter
+import com.example.turnero.adapters.OnlineDoctorsAdapter
+import com.example.turnero.adapters.SpecialityCardAdapter
+import com.example.turnero.dataclass.OnlineDoctor
+import com.example.turnero.dataclass.Profesional
+import com.example.turnero.dataclass.Speciality
 import com.google.firebase.database.*
 
 

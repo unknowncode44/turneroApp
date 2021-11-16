@@ -1,7 +1,11 @@
 package com.example.turnero
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Layout
+import android.view.View
+import android.widget.Toast
 import android.widget.Toolbar
 import androidx.appcompat.app.ActionBar
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,6 +17,7 @@ import com.example.turnero.dataclass.OnlineDoctor
 import com.example.turnero.dataclass.Profesional
 import com.example.turnero.dataclass.Speciality
 import com.example.turnero.databinding.DashboardUserBarBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.database.*
 
 
@@ -27,19 +32,43 @@ class DashboardUserActivity : AppCompatActivity(){
     lateinit var adapter: DoctorCardAdapter
     private lateinit var binding: DashboardUserBarBinding
 
+    @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DashboardUserBarBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
 
-        setSupportActionBar(binding)
+        //No podemos hacer referencia desde un binding, el problema son los 2 layout que se crean
+        val lay: View? = findViewById(R.layout.dashboard_user_bar)
+        //El layout include tiene que tener un id, para hacer referencia a la vista
+        setSupportActionBar(lay?.findViewById(R.id.toolbar))
+        val tb: ActionBar? = supportActionBar
+        if (tb != null){
+            tb.setHomeAsUpIndicator(R.drawable.nav_icon)
+            tb.setDisplayHomeAsUpEnabled(true)
+            tb.title = "nombre de usuario"
+        }
 
-        val ab: ActionBar? = supportActionBar
-        if(ab != null){
-            ab.setHomeAsUpIndicator(R.drawable.nav_icon)
-            ab.setDisplayHomeAsUpEnabled(true)
-            ab.title = "Nombre de Usuario"
+        val bottom: BottomNavigationView? = lay?.findViewById(R.id.bottomnav)
+
+
+        binding.bottomnav.setOnNavigationItemSelectedListener { item ->
+            when(item.itemId) {
+                R.id.categ -> {
+                    Toast.makeText(this, "Categorias", Toast.LENGTH_LONG).show()
+                    true
+                }
+                R.id.now -> {
+                    Toast.makeText(this, "Atendiendo ahora", Toast.LENGTH_LONG).show()
+                    true
+                }
+                R.id.esp -> {
+                    Toast.makeText(this, "Especialistas", Toast.LENGTH_LONG).show()
+                    true
+                }
+                else -> false
+            }
         }
 
         //doctorCardsRecyclerView = findViewById(R.id.recycler_dr_cards)
@@ -63,10 +92,6 @@ class DashboardUserActivity : AppCompatActivity(){
         //getSpecialityData()
         //getAvailableDoctor()
 
-
-    }
-
-    private fun toolbarFun(toolbar: Toolbar){
 
     }
 

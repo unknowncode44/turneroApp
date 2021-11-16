@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/White"
     tools:openDrawer="start"
+    tools:context=".DashboardUserActivity"
     android:fitsSystemWindows="true">
 
     <include
